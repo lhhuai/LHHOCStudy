@@ -22,7 +22,7 @@
     
 //    self.navigationItem.title = @"Study OC";
     
-//    self.title = @"Study OC";
+    self.title = @"wenyuan";
     
     CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT);
     _tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
@@ -35,11 +35,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (IOS_VERSION >= 7.0) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    } else {
-        self.wantsFullScreenLayout = YES;
-    }
+//    if (IOS_VERSION >= 7.0) {
+//        self.edgesForExtendedLayout = UIRectEdgeNone;
+//    } else {
+//        self.wantsFullScreenLayout = YES;
+//    }
 }
 
 - (void)didReceiveMemoryWarning {

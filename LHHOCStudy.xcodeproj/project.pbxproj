@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551803921C8436540005E126 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5518038F1C8436540005E126 /* Default-568h@2x.png */; };
+		551803931C8436540005E126 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 551803901C8436540005E126 /* Default.png */; };
+		551803941C8436540005E126 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 551803911C8436540005E126 /* Default@2x.png */; };
 		557F82EE1C7EDD9000BB3A12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82ED1C7EDD9000BB3A12 /* main.m */; };
 		557F82F11C7EDD9000BB3A12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82F01C7EDD9000BB3A12 /* AppDelegate.m */; };
 		557F82F41C7EDD9000BB3A12 /* LHHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82F31C7EDD9000BB3A12 /* LHHMainViewController.m */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5518038F1C8436540005E126 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		551803901C8436540005E126 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		551803911C8436540005E126 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		557F82E91C7EDD9000BB3A12 /* LHHOCStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHHOCStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557F82ED1C7EDD9000BB3A12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		557F82EF1C7EDD9000BB3A12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5518038E1C8436540005E126 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				551803901C8436540005E126 /* Default.png */,
+				551803911C8436540005E126 /* Default@2x.png */,
+				5518038F1C8436540005E126 /* Default-568h@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		557F82E01C7EDD9000BB3A12 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +115,12 @@
 			isa = PBXGroup;
 			children = (
 				557F831F1C7EE52600BB3A12 /* LHHBase */,
+				5518038E1C8436540005E126 /* Resource */,
 				557F82EF1C7EDD9000BB3A12 /* AppDelegate.h */,
 				557F82F01C7EDD9000BB3A12 /* AppDelegate.m */,
 				557F82F21C7EDD9000BB3A12 /* LHHMainViewController.h */,
 				557F82F31C7EDD9000BB3A12 /* LHHMainViewController.m */,
 				557F82F81C7EDD9000BB3A12 /* Assets.xcassets */,
-				557F82FD1C7EDD9000BB3A12 /* Info.plist */,
 				557F82EC1C7EDD9000BB3A12 /* Supporting Files */,
 			);
 			path = LHHOCStudy;
@@ -113,6 +129,7 @@
 		557F82EC1C7EDD9000BB3A12 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				557F82FD1C7EDD9000BB3A12 /* Info.plist */,
 				557F82ED1C7EDD9000BB3A12 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -250,7 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551803941C8436540005E126 /* Default@2x.png in Resources */,
 				557F82F91C7EDD9000BB3A12 /* Assets.xcassets in Resources */,
+				551803931C8436540005E126 /* Default.png in Resources */,
+				551803921C8436540005E126 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

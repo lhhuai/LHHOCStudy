@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		557F82EE1C7EDD9000BB3A12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82ED1C7EDD9000BB3A12 /* main.m */; };
 		557F82F11C7EDD9000BB3A12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82F01C7EDD9000BB3A12 /* AppDelegate.m */; };
-		557F82F41C7EDD9000BB3A12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82F31C7EDD9000BB3A12 /* ViewController.m */; };
-		557F82F71C7EDD9000BB3A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557F82F51C7EDD9000BB3A12 /* Main.storyboard */; };
+		557F82F41C7EDD9000BB3A12 /* LHHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82F31C7EDD9000BB3A12 /* LHHMainViewController.m */; };
 		557F82F91C7EDD9000BB3A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557F82F81C7EDD9000BB3A12 /* Assets.xcassets */; };
-		557F82FC1C7EDD9000BB3A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557F82FA1C7EDD9000BB3A12 /* LaunchScreen.storyboard */; };
 		557F83071C7EDD9000BB3A12 /* LHHOCStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F83061C7EDD9000BB3A12 /* LHHOCStudyTests.m */; };
 		557F83121C7EDD9000BB3A12 /* LHHOCStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F83111C7EDD9000BB3A12 /* LHHOCStudyUITests.m */; };
 /* End PBXBuildFile section */
@@ -39,11 +37,9 @@
 		557F82ED1C7EDD9000BB3A12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		557F82EF1C7EDD9000BB3A12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557F82F01C7EDD9000BB3A12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		557F82F21C7EDD9000BB3A12 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		557F82F31C7EDD9000BB3A12 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		557F82F61C7EDD9000BB3A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		557F82F21C7EDD9000BB3A12 /* LHHMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHMainViewController.h; sourceTree = "<group>"; };
+		557F82F31C7EDD9000BB3A12 /* LHHMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHHMainViewController.m; sourceTree = "<group>"; };
 		557F82F81C7EDD9000BB3A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		557F82FB1C7EDD9000BB3A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		557F82FD1C7EDD9000BB3A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		557F83021C7EDD9000BB3A12 /* LHHOCStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LHHOCStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		557F83061C7EDD9000BB3A12 /* LHHOCStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHHOCStudyTests.m; sourceTree = "<group>"; };
@@ -51,6 +47,7 @@
 		557F830D1C7EDD9000BB3A12 /* LHHOCStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LHHOCStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		557F83111C7EDD9000BB3A12 /* LHHOCStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHHOCStudyUITests.m; sourceTree = "<group>"; };
 		557F83131C7EDD9000BB3A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		557F83211C7EE57300BB3A12 /* LHHDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +98,12 @@
 		557F82EB1C7EDD9000BB3A12 /* LHHOCStudy */ = {
 			isa = PBXGroup;
 			children = (
+				557F831F1C7EE52600BB3A12 /* LHHBase */,
 				557F82EF1C7EDD9000BB3A12 /* AppDelegate.h */,
 				557F82F01C7EDD9000BB3A12 /* AppDelegate.m */,
-				557F82F21C7EDD9000BB3A12 /* ViewController.h */,
-				557F82F31C7EDD9000BB3A12 /* ViewController.m */,
-				557F82F51C7EDD9000BB3A12 /* Main.storyboard */,
+				557F82F21C7EDD9000BB3A12 /* LHHMainViewController.h */,
+				557F82F31C7EDD9000BB3A12 /* LHHMainViewController.m */,
 				557F82F81C7EDD9000BB3A12 /* Assets.xcassets */,
-				557F82FA1C7EDD9000BB3A12 /* LaunchScreen.storyboard */,
 				557F82FD1C7EDD9000BB3A12 /* Info.plist */,
 				557F82EC1C7EDD9000BB3A12 /* Supporting Files */,
 			);
@@ -138,6 +134,14 @@
 				557F83131C7EDD9000BB3A12 /* Info.plist */,
 			);
 			path = LHHOCStudyUITests;
+			sourceTree = "<group>";
+		};
+		557F831F1C7EE52600BB3A12 /* LHHBase */ = {
+			isa = PBXGroup;
+			children = (
+				557F83211C7EE57300BB3A12 /* LHHDefines.h */,
+			);
+			path = LHHBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				557F82FC1C7EDD9000BB3A12 /* LaunchScreen.storyboard in Resources */,
 				557F82F91C7EDD9000BB3A12 /* Assets.xcassets in Resources */,
-				557F82F71C7EDD9000BB3A12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				557F82F41C7EDD9000BB3A12 /* ViewController.m in Sources */,
+				557F82F41C7EDD9000BB3A12 /* LHHMainViewController.m in Sources */,
 				557F82F11C7EDD9000BB3A12 /* AppDelegate.m in Sources */,
 				557F82EE1C7EDD9000BB3A12 /* main.m in Sources */,
 			);
@@ -309,25 +311,6 @@
 			targetProxy = 557F830E1C7EDD9000BB3A12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		557F82F51C7EDD9000BB3A12 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				557F82F61C7EDD9000BB3A12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		557F82FA1C7EDD9000BB3A12 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				557F82FB1C7EDD9000BB3A12 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		557F83141C7EDD9000BB3A12 /* Debug */ = {
@@ -415,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LHHOCStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.LHHOCStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LHHOCStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.LHHOCStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,6 +484,7 @@
 				557F83181C7EDD9000BB3A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		557F83191C7EDD9000BB3A12 /* Build configuration list for PBXNativeTarget "LHHOCStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +493,7 @@
 				557F831B1C7EDD9000BB3A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		557F831C1C7EDD9000BB3A12 /* Build configuration list for PBXNativeTarget "LHHOCStudyUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +502,7 @@
 				557F831E1C7EDD9000BB3A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,8 @@
 
 @interface LHHMainViewController : UIViewController
 
+@property (nonatomic, strong) NSString *account;
+@property (nonatomic, strong) NSString *password;
 
 @end
 

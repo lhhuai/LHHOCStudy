@@ -49,7 +49,7 @@
 
 #pragma - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,6 +57,12 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHIdentifier"];
         cell.backgroundColor = [UIColor grayColor];
+    }
+    if (indexPath.row == 0) {
+        cell.textLabel.text = self.account;
+    }
+    if (indexPath.row == 1) {
+        cell.textLabel.text = self.password;
     }
     return cell;
 }

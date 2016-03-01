@@ -8,15 +8,17 @@
 
 #import "LHHLoginViewController.h"
 #import "LHHDefines.h"
-#import "LHHLoginAccountCell.h"
-#import "LHHLoginPasswordCell.h"
+#import "LHHLoginTableViewCell.h"
+#import "LHHMainViewController.h"
 
-static NSString *kLHHLoginAccountCellIdentifier = @"LHHLoginAccountCellIdentifier";
-static NSString *kLHHLoginPasswordCellIdentifier = @"LHHLoginPasswordCellIdentifier";
+static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdentifier";
 
-@interface LHHLoginViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface LHHLoginViewController () <UITableViewDelegate, UITableViewDataSource, LHHLoginTableViewCellDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) NSString *accountString;
+@property (nonatomic, strong) NSString *passwordString;
 
 @end
 
@@ -33,8 +35,6 @@ static NSString *kLHHLoginPasswordCellIdentifier = @"LHHLoginPasswordCellIdentif
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor clearColor];
-    [self.tableView registerClass:[LHHLoginAccountCell class] forCellReuseIdentifier:kLHHLoginAccountCellIdentifier];
-    [self.tableView registerClass:[LHHLoginPasswordCell class] forCellReuseIdentifier:kLHHLoginPasswordCellIdentifier];
     [self.view addSubview:self.tableView];
     
     // table header view
@@ -49,10 +49,18 @@ static NSString *kLHHLoginPasswordCellIdentifier = @"LHHLoginPasswordCellIdentif
     UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
     UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, SCREEN_WIDTH - 20, 30)];
     [loginButton setTitle:@"Log In" forState:UIControlStateNormal];
+    [loginButton addTarget:self action:@selector(onLogin) forControlEvents:UIControlEventTouchUpInside];
     loginButton.backgroundColor = [UIColor greenColor];
     [tableFooterView addSubview:loginButton];
 
     self.tableView.tableFooterView = tableFooterView;
+}
+
+- (void)onLogin {
+    LHHMainViewController *mvc = [[LHHMainViewController alloc] init];
+    mvc.account = self.accountString;
+    mvc.password = self.passwordString;
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -65,7 +73,7 @@ static NSString *kLHHLoginPasswordCellIdentifier = @"LHHLoginPasswordCellIdentif
     // Dispose of any resources that can be recreated.
 }
 
-#pragma - UITableViewDataSource
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
@@ -75,14 +83,44 @@ static NSString *kLHHLoginPasswordCellIdentifier = @"LHHLoginPasswordCellIdentif
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    LHHLoginTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kLHHLoginTableViewCellIdentifier];
+    if (cell == nil) {
+        cell = [[LHHLoginTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kLHHLoginTableViewCellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.contentView.backgroundColor = [UIColor whiteColor];
+        cell.delegate = self;
+    }
     if (indexPath.row == 0) {
-        LHHLoginAccountCell *loginAccountCell = [tableView dequeueReusableCellWithIdentifier:kLHHLoginAccountCellIdentifier forIndexPath:indexPath];
-        [loginAccountCell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        return loginAccountCell;
-    } else {
-        LHHLoginPasswordCell *loginPasswordCell = [tableView dequeueReusableCellWithIdentifier:kLHHLoginPasswordCellIdentifier forIndexPath:indexPath];
-        [loginPasswordCell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        return loginPasswordCell;
+        cell.cellType = LHHLoginCellTypeAccount;
+        cell.label.text = @"Account";
+        cell.textField.returnKeyType = UIReturnKeyNext;
+        cell.textField.secureTextEntry = NO;
+        cell.textField.placeholder = @"Enter account";
+    }
+    if (indexPath.row == 1) {
+        cell.cellType = LHHLoginCellTypePassword;
+        cell.label.text = @"Password";
+        cell.textField.returnKeyType = UIReturnKeyDone;
+        cell.textField.secureTextEntry = YES;
+        cell.textField.placeholder = @"Enter password";
+    }
+    return cell;
+}
+
+#pragma mark - LHHLoginTableViewCellDelegate
+- (void)cellTextFieldDidEndEditing:(LHHLoginTableViewCell *)cell {
+    switch (cell.cellType) {
+        case LHHLoginCellTypeAccount:
+        {
+            self.accountString = cell.textField.text;
+            break;
+        }
+        case LHHLoginCellTypePassword:
+        {
+            self.passwordString = cell.textField.text;
+        }
+        default:
+            break;
     }
 }
 

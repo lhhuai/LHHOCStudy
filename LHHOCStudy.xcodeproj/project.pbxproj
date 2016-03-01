@@ -11,14 +11,13 @@
 		551803931C8436540005E126 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 551803901C8436540005E126 /* Default.png */; };
 		551803941C8436540005E126 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 551803911C8436540005E126 /* Default@2x.png */; };
 		5518039F1C85370D0005E126 /* LHHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5518039E1C85370D0005E126 /* LHHLoginViewController.m */; };
-		551803A21C853B280005E126 /* LHHLoginAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 551803A11C853B280005E126 /* LHHLoginAccountCell.m */; };
-		551803A51C853B3F0005E126 /* LHHLoginPasswordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 551803A41C853B3F0005E126 /* LHHLoginPasswordCell.m */; };
 		557F82EE1C7EDD9000BB3A12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82ED1C7EDD9000BB3A12 /* main.m */; };
 		557F82F11C7EDD9000BB3A12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82F01C7EDD9000BB3A12 /* AppDelegate.m */; };
 		557F82F41C7EDD9000BB3A12 /* LHHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F82F31C7EDD9000BB3A12 /* LHHMainViewController.m */; };
 		557F82F91C7EDD9000BB3A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557F82F81C7EDD9000BB3A12 /* Assets.xcassets */; };
 		557F83071C7EDD9000BB3A12 /* LHHOCStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F83061C7EDD9000BB3A12 /* LHHOCStudyTests.m */; };
 		557F83121C7EDD9000BB3A12 /* LHHOCStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F83111C7EDD9000BB3A12 /* LHHOCStudyUITests.m */; };
+		5594F1011C85968700A9CDC9 /* LHHLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5594F1001C85968700A9CDC9 /* LHHLoginTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +43,6 @@
 		551803911C8436540005E126 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5518039D1C85370D0005E126 /* LHHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLoginViewController.h; sourceTree = "<group>"; };
 		5518039E1C85370D0005E126 /* LHHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLoginViewController.m; sourceTree = "<group>"; };
-		551803A01C853B280005E126 /* LHHLoginAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLoginAccountCell.h; sourceTree = "<group>"; };
-		551803A11C853B280005E126 /* LHHLoginAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLoginAccountCell.m; sourceTree = "<group>"; };
-		551803A31C853B3E0005E126 /* LHHLoginPasswordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLoginPasswordCell.h; sourceTree = "<group>"; };
-		551803A41C853B3F0005E126 /* LHHLoginPasswordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLoginPasswordCell.m; sourceTree = "<group>"; };
 		557F82E91C7EDD9000BB3A12 /* LHHOCStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHHOCStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557F82ED1C7EDD9000BB3A12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		557F82EF1C7EDD9000BB3A12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +58,8 @@
 		557F83111C7EDD9000BB3A12 /* LHHOCStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHHOCStudyUITests.m; sourceTree = "<group>"; };
 		557F83131C7EDD9000BB3A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		557F83211C7EE57300BB3A12 /* LHHDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHDefines.h; sourceTree = "<group>"; };
+		5594F0FF1C85968700A9CDC9 /* LHHLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLoginTableViewCell.h; sourceTree = "<group>"; };
+		5594F1001C85968700A9CDC9 /* LHHLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLoginTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +102,8 @@
 			children = (
 				5518039D1C85370D0005E126 /* LHHLoginViewController.h */,
 				5518039E1C85370D0005E126 /* LHHLoginViewController.m */,
-				551803A01C853B280005E126 /* LHHLoginAccountCell.h */,
-				551803A11C853B280005E126 /* LHHLoginAccountCell.m */,
-				551803A31C853B3E0005E126 /* LHHLoginPasswordCell.h */,
-				551803A41C853B3F0005E126 /* LHHLoginPasswordCell.m */,
+				5594F0FF1C85968700A9CDC9 /* LHHLoginTableViewCell.h */,
+				5594F1001C85968700A9CDC9 /* LHHLoginTableViewCell.m */,
 			);
 			path = LHHLogin;
 			sourceTree = "<group>";
@@ -319,11 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				557F82F41C7EDD9000BB3A12 /* LHHMainViewController.m in Sources */,
+				5594F1011C85968700A9CDC9 /* LHHLoginTableViewCell.m in Sources */,
 				557F82F11C7EDD9000BB3A12 /* AppDelegate.m in Sources */,
 				557F82EE1C7EDD9000BB3A12 /* main.m in Sources */,
-				551803A21C853B280005E126 /* LHHLoginAccountCell.m in Sources */,
 				5518039F1C85370D0005E126 /* LHHLoginViewController.m in Sources */,
-				551803A51C853B3F0005E126 /* LHHLoginPasswordCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

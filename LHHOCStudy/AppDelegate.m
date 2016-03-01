@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LHHMainViewController.h"
+#import "LHHLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    LHHMainViewController *mainViewController = [[LHHMainViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+//    LHHMainViewController *mainViewController = [[LHHMainViewController alloc] init];
+    LHHLoginViewController *loginViewController = [[LHHLoginViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = nav;
